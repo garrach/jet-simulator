@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Jet Simulator Unity Game! This project is a high-fidelity jet simulation experience built with Unity. Take control of powerful fighter jets, engage in thrilling dogfights, and experience the excitement of aerial combat.
+Welcome to the Jet Simulator Unity Game! This project is a high-fidelity jet simulation experience built with [Unity](https://unity.com/). Take control of powerful fighter jets, engage in thrilling dogfights, and experience the excitement of aerial combat.
 
 ## Features
 
@@ -23,7 +23,7 @@ Welcome to the Jet Simulator Unity Game! This project is a high-fidelity jet sim
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/yourusername/jet-simulator.git`
-2. Open the project in Unity.
+2. Open the project in [Unity](https://unity.com/).
 3. Ensure you are using the recommended Unity version.
 4. Build and run the game.
 
@@ -41,13 +41,13 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- Thanks to Unity Technologies for providing an amazing game development platform.
+- Thanks to [Unity Technologies](https://unity.com/) for providing an amazing game development platform.
 - Credits to [Your Name] for creating the stunning 3D models used in the game.
 
 ## Contact
 
-For inquiries or support, contact us at your.email@example.com. Join our [Discord Community](https://discord.gg/example) for discussions and updates.
+For inquiries or support, contact us at [your.email@example.com](mailto:your.email@example.com). Join our [Discord Community](https://discord.gg/example) for discussions and updates.
