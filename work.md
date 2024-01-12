@@ -85,5 +85,56 @@ The integration of QR code reading to open an AR scene involves a combination of
 ## Example Script (using AR Foundation and ZXing):
 
 ```csharp
-using UnityEngine;using UnityEngine.XR.ARFoundation;using UnityEngine.XR.ARSubsystems;using ZXing;public class QRCodeScanner : MonoBehaviour{private IBarcodeReader barcodeReader;private ARSessionOrigin arSessionOrigin;private void Start(){barcodeReader = new BarcodeReader();arSessionOrigin = FindObjectOfType<ARSessionOrigin>();}private void Update(){// Example: Trigger scanning when a button is pressed.if (Input.GetKeyDown(KeyCode.Space)){ScanQRCode();}}private void ScanQRCode(){// Capture the camera imageTexture2D cameraTexture = ScreenCapture.CaptureScreenshotAsTexture();// Decode the QR codeResult result = barcodeReader.Decode(cameraTexture.GetPixels32(), cameraTexture.width, cameraTexture.height);if (result != null){// Process the result (e.g., load AR scene based on the QR code data)Debug.Log("QR Code Scanned: " + result.Text);LoadARScene(result.Text);}else{Debug.Log("No QR Code found");}}private void LoadARScene(string sceneIdentifier){// Implement logic to load the AR scene based on the QR code data// For example, use the sceneIdentifier to determine which AR scene to load// arSessionOrigin.LoadScene(sceneIdentifier);}}
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using ZXing;
+
+public class QRCodeScanner : MonoBehaviour
+{
+    private IBarcodeReader barcodeReader;
+    private ARSessionOrigin arSessionOrigin;
+
+    private void Start()
+    {
+        barcodeReader = new BarcodeReader();
+        arSessionOrigin = FindObjectOfType<ARSessionOrigin>();
+    }
+
+    private void Update()
+    {
+        // Example: Trigger scanning when a button is pressed.
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ScanQRCode();
+        }
+    }
+
+    private void ScanQRCode()
+    {
+        // Capture the camera image
+        Texture2D cameraTexture = ScreenCapture.CaptureScreenshotAsTexture();
+
+        // Decode the QR code
+        Result result = barcodeReader.Decode(cameraTexture.GetPixels32(), cameraTexture.width, cameraTexture.height);
+        
+        if (result != null)
+        {
+            // Process the result (e.g., load AR scene based on the QR code data)
+            Debug.Log("QR Code Scanned: " + result.Text);
+            LoadARScene(result.Text);
+        }
+        else
+        {
+            Debug.Log("No QR Code found");
+        }
+    }
+
+    private void LoadARScene(string sceneIdentifier)
+    {
+        // Implement logic to load the AR scene based on the QR code data
+        // For example, use the sceneIdentifier to determine which AR scene to load
+        // arSessionOrigin.LoadScene(sceneIdentifier);
+    }
+}
 ```
